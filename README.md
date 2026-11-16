@@ -22,13 +22,19 @@ Each record represents one census tract with vegetation, built-up-candidate, and
 
 ## 3. Input and Output
 
-| | Input | Output |
-|---|---|---|
-| Data structure | Tabular CSV | Tabular CSV |
-| Representation | One row per census tract | One row per tract with calculated indicators |
-| Records | 219 | 219 |
-| File | Duval_Tract_LandCover_2017_2025.csv | tract_change_indicators.csv |
-| Example | figures/input_example.png | figures/output_example.png |
+**Input**
+- **Data structure:** tabular CSV
+- **Description:** one row per census tract, with 2017 and 2025 measures of vegetation-classified tract area, built-up-candidate tract area, vegetation-classified area in FEMA zones, built-up-candidate area in FEMA zones (219 rows, 11 columns) 
+- **File:** `data/Duval_Tract_LandCover_2017_2025.csv`
+  
+![input](input_example.png)
+
+**Output**
+- **Data structure:** tabular CSV
+- **Description:** one row per census tract, with calculated indicators of land cover change from 2017- 2025 (219 rows, 15 columns) 
+- **File:** `data/tract_change_indicators.csv` (to be created)
+
+![output](output_example.png)
 
 The Python program creates new data, including vegetation change, built-up-candidate change, percentage-point change in land-cover share, FEMA-zone change, ranking, and screening flags.
 
