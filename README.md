@@ -43,10 +43,10 @@ The Python program creates new data, including vegetation change, built-up-candi
 The primary data structure is a **pandas DataFrame**, which organizes census tract measurements into rows and columns.
 
 Additional structures include:
-- **Lists:** Specify required fields and support validation.
-- **Dictionaries:** Store descriptive labels for land-cover categories.
-- **Boolean Series:** Represent the conditions used to identify census tracts for screening.
-- **NumPy arrays:** Support numerical operations and validation tests.
+- **Lists:** Specify required fields and support validation
+- **Dictionaries:** Store descriptive labels for land-cover categories
+- **Boolean Series:** Represent the conditions used to identify census tracts for screening
+- **NumPy arrays:** Support numerical operations and validation tests
 
 These structures make it easier to preserve census tract identifiers, perform calculations consistently, and sort geographic records.
 
@@ -76,22 +76,22 @@ INPUT_FILE = "Duval_Tract_LandCover_2017_2025.csv"
 
 ## 6. Processing Workflow
 
-1. Load census tract-level land-cover measurements.
-2. Validate required fields, duplicate GEOIDs, missing values, and geographic area constraints.
-3. Calculate changes between 2017 and 2025.
-4. Convert square kilometers to hectares and calculate changes in land-cover share.
-5. Calculate changes within FEMA flood hazard areas.
-6. Apply transparent screening criteria.
-7. Rank census tracts by estimated vegetation-class decline.
-8. Export new CSV datasets and supporting figures.
+1. Load census tract-level land-cover measurements
+2. Validate required fields, duplicate GEOIDs, missing values, and geographic area constraints
+3. Calculate changes between 2017 and 2025
+4. Convert square kilometers to hectares and calculate changes in land-cover share
+5. Calculate changes within FEMA flood hazard areas
+6. Apply transparent screening criteria
+7. Rank census tracts by estimated vegetation-class decline
+8. Export new CSV datasets and supporting figures
 
 ## 7. Outputs
 
 The program generates:
 
-- outputs/tract_change_indicators.csv — All calculated indicators, screening flags, and rankings.
-- outputs/top10_vegetation_loss.csv — The ten census tracts with the largest absolute vegetation-class declines.
-- outputs/tract_vegetation_loss.png — A chart displaying the top ten tracts.
+- outputs/tract_change_indicators.csv — All calculated indicators, screening flags, and rankings
+- outputs/top10_vegetation_loss.csv — The ten census tracts with the largest absolute vegetation-class declines
+- outputs/tract_vegetation_loss.png — A chart displaying the top ten tracts
 
 These results are intended for screening and further investigation, not for predicting flooding.
 
@@ -99,12 +99,12 @@ These results are intended for screening and further investigation, not for pred
 
 The program includes checks for:
 
-- Missing or duplicate records.
-- Invalid area measurements.
-- FEMA-area measurements exceeding total classified areas.
-- Correct area-change and unit-conversion calculations.
-- Correct ordering of ranked census tracts.
-- Reconciliation with countywide Google Earth Engine area statistics.
+- Missing or duplicate records
+- Invalid area measurements
+- FEMA-area measurements exceeding total classified areas
+- Correct area-change and unit-conversion calculations
+- Correct ordering of ranked census tracts
+- Reconciliation with countywide Google Earth Engine area statistics
 
 A negative-area test demonstrates that invalid data is rejected.
 
