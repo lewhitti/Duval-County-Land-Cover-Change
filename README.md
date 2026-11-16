@@ -114,6 +114,3 @@ Land-cover classifications have uncertainty, particularly when distinguishing bu
 
 Future work could improve classification accuracy, use additional observation years, and incorporate other socioeconomic or environmental indicators.
 
-## 10. References
-
-
